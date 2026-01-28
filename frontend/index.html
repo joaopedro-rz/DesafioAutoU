@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio AutoU - IA para Classificação de Emails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Classificador de Emails</h1>
+            <p class="subtitle">Classifique emails e gere respostas automáticas com IA</p>
+        </header>
+
+        <main>
+            <form id="emailForm" class="email-form">
+                <div class="input-section">
+                    <label for="emailText">Cole o texto do email ou faça upload de um arquivo:</label>
+                    
+                    <textarea 
+                        id="emailText" 
+                        name="emailText" 
+                        rows="10" 
+                        placeholder="Cole aqui o conteúdo do email que deseja classificar..."
+                    ></textarea>
+                    
+                    <div class="divider">
+                        <span>OU</span>
+                    </div>
+                    
+                    <div class="file-upload">
+                        <input 
+                            type="file" 
+                            id="emailFile" 
+                            name="emailFile" 
+                            accept=".txt,.pdf"
+                            class="file-input"
+                        >
+                        <label for="emailFile" class="file-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <span id="fileLabel">Escolher arquivo (.txt ou .pdf)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <span class="btn-text">Classificar Email</span>
+                    <span class="btn-loader" style="display: none;">
+                        <span class="spinner"></span> Processando...
+                    </span>
+                </button>
+            </form>
+
+            <div id="result" class="result" style="display: none;">
+                <h2>Resultado da Análise</h2>
+                
+                <div class="result-card">
+                    <div class="result-label">Categoria:</div>
+                    <div id="categoryResult" class="category-badge"></div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-label">Resposta Sugerida:</div>
+                    <div id="responseResult" class="response-text"></div>
+                </div>
+
+                <button onclick="resetForm()" class="btn-reset">
+                    Nova Classificação
+                </button>
+            </div>
+
+            <div id="error" class="error" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span id="errorMessage"></span>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
