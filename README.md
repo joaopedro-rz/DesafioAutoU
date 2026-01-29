@@ -1,6 +1,13 @@
-# Desafio - Classificador de Email
+# Desafio AutoU - Classificador de E-mail
 
-Aplicação web para classificar emails (Produtivo/Improdutivo) e sugerir uma resposta automática.
+Aplicação web para classificar e-mails (Produtivo/Improdutivo) e sugerir uma resposta automática.
+
+## Deploy (Render)
+
+O aplicativo está em deploy na plataforma Render:
+
+- Site estático (aplicação completa): https://desafioautou-w20m.onrender.com
+- Web Service (backend/API): https://desafioautou-c87f.onrender.com
 
 ## Como executar localmente
 
