@@ -1,5 +1,5 @@
 // Configuração da API
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://desafioautou-c87f.onrender.com';
 
 // Elementos do DOM
 const emailForm = document.getElementById('emailForm');
