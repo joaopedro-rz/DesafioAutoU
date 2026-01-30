@@ -1,9 +1,8 @@
 import re
 
 
-# Lista de stopwords em português e inglês
+# Lista de stopwords em português
 STOPWORDS = {
-    # Português
     'de', 'a', 'o', 'que', 'e', 'do', 'da', 'em', 'um', 'para', 'é', 'com', 'não', 
     'uma', 'os', 'no', 'se', 'na', 'por', 'mais', 'as', 'dos', 'como', 'mas', 'ao', 
     'ele', 'das', 'à', 'seu', 'sua', 'ou', 'quando', 'muito', 'nos', 'já', 'eu', 
