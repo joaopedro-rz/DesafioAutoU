@@ -1,4 +1,4 @@
-// Configuração da API
+    // Configuração da API
 const API_URL = 'https://desafioautou-c87f.onrender.com';
 
 // Elementos do DOM
@@ -19,7 +19,6 @@ const responseResult = document.getElementById('responseResult');
 emailFile.addEventListener('change', (e) => {
     const file = e.target.files[0];
     if (file) {
-        // O HTML já possui um ícone no label; aqui atualizamos apenas o texto.
         fileLabel.textContent = file.name;
         // Limpar textarea se arquivo for selecionado
         emailText.value = '';

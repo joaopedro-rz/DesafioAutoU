@@ -12,16 +12,6 @@ class EmailClassifier:
         }
     
     def classify_and_respond(self, original_text: str, processed_text: str) -> dict:
-        """
-        Classifica o email e gera resposta automática
-        
-        Args:
-            original_text: Texto original do email
-            processed_text: Texto pré-processado
-        
-        Returns:
-            Dicionário com categoria e resposta
-        """
         # Criar prompt para a IA
         prompt = self._create_classification_prompt(original_text)
         
@@ -38,7 +28,7 @@ class EmailClassifier:
         }
     
     def _create_classification_prompt(self, email_text: str) -> str:
-        """Cria o prompt para a IA"""
+        # Cria o prompt para a IA
         return f"""Analise o seguinte email e realize duas tarefas:
 
 1. CLASSIFICAÇÃO: Determine se o email é:

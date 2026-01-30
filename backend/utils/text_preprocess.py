@@ -13,33 +13,11 @@ STOPWORDS = {
     'nós', 'lhe', 'deles', 'essas', 'esses', 'pelas', 'este', 'dele', 'tu', 'te', 
     'vocês', 'vos', 'lhes', 'meus', 'minhas', 'teu', 'tua', 'teus', 'tuas', 'nosso', 
     'nossa', 'nossos', 'nossas', 'dela', 'delas', 'esta', 'estes', 'estas', 'aquele', 
-    'aquela', 'aqueles', 'aquelas', 'isto', 'aquilo', 'ser', 'foi', 'ter', 'sido',
-    # Inglês
-    'the', 'and', 'is', 'in', 'to', 'of', 'a', 'for', 'on', 'with', 'as', 'it', 
-    'that', 'by', 'at', 'from', 'this', 'be', 'are', 'or', 'an', 'was', 'but', 
-    'not', 'have', 'has', 'had', 'we', 'you', 'they', 'will', 'can', 'if', 'their', 
-    'which', 'about', 'all', 'were', 'when', 'there', 'been', 'who', 'would', 'what', 
-    'so', 'up', 'out', 'them', 'than', 'she', 'him', 'her', 'could', 'been', 'should'
+    'aquela', 'aqueles', 'aquelas', 'isto', 'aquilo', 'ser', 'foi', 'ter', 'sido'
 }
 
 
 def preprocess_text(text: str) -> str:
-    """
-    Pré-processa o texto do email
-    
-    Etapas:
-    1. Normalização para lowercase
-    2. Remoção de caracteres especiais e pontuação
-    3. Tokenização simples
-    4. Remoção de stopwords
-    5. Reconstrução do texto
-    
-    Args:
-        text: Texto original do email
-    
-    Returns:
-        Texto pré-processado
-    """
 
     # Normalizar para lowercase
     text = text.lower()

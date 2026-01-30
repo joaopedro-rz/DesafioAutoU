@@ -34,16 +34,6 @@ async def classify_email(
     text: Optional[str] = Form(None),
     file: Optional[UploadFile] = File(None)
 ):
-    """
-    Classifica um email e gera resposta automática
-    
-    Args:
-        text: Texto do email (opcional)
-        file: Arquivo .txt ou .pdf (opcional)
-    
-    Returns:
-        Categoria do email e resposta sugerida
-    """
     try:
         # Validar entrada
         if not text and not file:

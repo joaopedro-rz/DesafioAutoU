@@ -7,7 +7,7 @@ load_dotenv(dotenv_path=_backend_dir / ".env")
 
 
 class AIService:
-    """Serviço de integração com IA (Hugging Face ou OpenAI)"""
+    # Serviço de integração com IA (Hugging Face ou OpenAI)
     
     def __init__(self):
         self.provider = os.getenv("AI_PROVIDER", "huggingface").lower()
@@ -51,15 +51,6 @@ class AIService:
         return None
     
     def classify_email(self, prompt: str) -> str:
-        """
-        Envia prompt para a IA e retorna a resposta
-        
-        Args:
-            prompt: Prompt com instruções de classificação
-        
-        Returns:
-            Resposta da IA com categoria e resposta sugerida
-        """
         try:
             if self.provider == "huggingface":
                 return self._generate_with_huggingface(prompt)
